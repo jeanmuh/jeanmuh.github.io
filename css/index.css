@@ -1,0 +1,105 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Main container - optional flex wrapper */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero section as a flex center layout */
+.hero {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+}
+
+/* Intro card */
+.intro {
+  max-width: 700px;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* CTA buttons container - uses Flexbox */
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn, .btn-outline {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
